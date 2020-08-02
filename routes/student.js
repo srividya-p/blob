@@ -48,7 +48,7 @@ router.post('/insert/inserted', (req, res) => {
 
     var sql2 = 'INSERT INTO paths VALUES(' + id + ',\'/home/pika/Desktop/' + path + '\')'
     connection.query(sql2, (err, results) => {
-        if (err) return res.send(err)
+        if (err) return console.log(err)
     })
 
 })

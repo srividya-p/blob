@@ -29,8 +29,9 @@
                             <input name="s_name" type="text" id="name" placeholder="Name"><br><br>
                             <label>Image:</label><br><br>
                             <label style="font-weight: bold;">Currently&nbsp;{{path}}</label><br><br>
-                            <input name="path" type="file" id="path1"><br><br>
-                            <button type="submit">Update</button><br><br>
+                            <input name="path" type="file" id="path" onchange="preview()" accept="image/*"><br><br>
+                            <img src="" height="200" alt="Image preview..."><br><br>
+                            <button type="submit" onclick="getImage()">Update</button><br><br>
                         </fieldset>
                     </form>
                 </div>
@@ -41,6 +42,20 @@
 <script>
     document.getElementById('id').value = "{{id}}"
     document.getElementById('name').value = "{{name}}"
+</script>
+
+<script>
+    function preview() {
+        const preview = document.querySelector('img');
+        const file = document.querySelector('input[type=file]').files[0];
+        const reader = new FileReader();
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+        reader.addEventListener("load", function () {
+            preview.src = reader.result;
+        }, false);
+    }
 </script>
 
 </html>
