@@ -11,8 +11,8 @@ const connection = require('./connection')
 
 const app = express()
 
-publicDirPath = path.join(__dirname, '../Blob2.0/public')
-viewsPath = path.join(__dirname, '../Blob2.0/templates/views')
+publicDirPath = path.join(__dirname, '../blob-v1.0/public')
+viewsPath = path.join(__dirname, '../blob-v1.0/templates/views')
 const port = process.env.PORT || 3000
 
 app.set('view engine', 'hbs')
