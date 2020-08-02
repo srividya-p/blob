@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <div class="limiter">
+        <div class="container-table100">
+            <div class="wrap-table100">
+                <div class="table100">
+                    <h1>{{title}}</h1><br><br>
+                    <div id="anchors">
+                        <a href='/'>View</a>&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+                        <a href='/insert'>Insert</a>&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+                        <a href='/search'>Update</a>&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+                        <a href='/delete'>Delete</a><br><br><br><br>
+                    </div>
+                    <form action="/insert/inserted" method="POST" autocomplete="off">
+                        <fieldset>
+                            <br><br><label>Id:</label><br>
+                            <input name="id" type="number" id="id" placeholder="Id"><br><br>
+                            <label>Name:</label><br>
+                            <input name="s_name" type="text" id="name" placeholder="Name"><br><br>
+                            <label>Image:</label><br><br>
+                            <input name="path" type="file" id="path" placeholder="Path"><br><br>
+                            <button type="submit">Insert</button><br><br>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
